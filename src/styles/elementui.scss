@@ -1,0 +1,15 @@
+//element.ui css样式在组件里面改有的不会生效，是因为加了scoped。局部作用，放在这里是全局配置
+// 左侧导航栏二级菜单激活文字颜色
+
+// 左侧导航栏一级菜单激活背景色
+.el-submenu.is-active.is-opened .el-submenu__title {
+  background: $mainCcolor !important;
+  font-weight: 700 !important;
+  
+}
+// tree
+.el-tree {
+  .el-tree-node__content {
+    height: 50px !important;
+  }
+}

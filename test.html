@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .fa.fa1.fa2{
+      display: flex;
+      flex-flow: row nowrap;
+      width: 300px;
+      /* height: 200px; */
+      border: 1px solid #000;
+    }
+    .fa .son1{
+      /* 注意这里 son1是没有给高度的，但是son1后代demo1给了高度，son1的fa给了高度，
+      那么，son1的高度完全由fa决定。
+       */
+      width: 100px;
+      background: firebrick;
+      
+    }
+    .fa .son1 .demo1 {
+      height: 200px;
+      width: 50px;
+      background: darkgoldenrod;
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="fa fa1 fa2">
+    <div class="son1">
+      <div class="demo1"></div>
+    </div>
+    
+
+  </div>
+</body>
+</html>
