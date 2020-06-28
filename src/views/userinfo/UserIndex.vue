@@ -1,9 +1,15 @@
 <template>
-  <div>UserIndex</div>
+  <div>
+    <UserInfoSearch></UserInfoSearch>
+  </div>
 </template>
 <script>
+import UserInfoSearch from "@/views/userinfo/comp/UserInfoSearch";
 export default {
   name: "UserIndex",
+  components: {
+    UserInfoSearch
+  },
   data() {
     return {};
   },
