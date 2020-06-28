@@ -11,13 +11,21 @@ import "./styles/normalize.css";
 
 import Icon from "vue2-svg-icon/Icon.vue";
 Vue.component("icon", Icon);
-import Pagination from './components/globalComponents/pagination'
-Vue.use(Pagination)
 
+// import Pagination from './components/globalComponents/pagination'
+// Vue.use(Pagination)
 
+// import MySelect from './components/globalComponents/myselect/index'
+// Vue.use(MySelect)
+//批量导入全局自定义组件
+import globalComponents from './components/globalComponents'
+for (let key in globalComponents) {
+  Vue.use(globalComponents[key])
+}
 // 定义全局方法
 import global from "./utils/global";
 Vue.use(global);
+
 Vue.config.productionTip = false;
 
 // 定义全局过滤器

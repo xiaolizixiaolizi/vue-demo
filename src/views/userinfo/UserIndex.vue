@@ -1,17 +1,24 @@
 <template>
   <div>
     <UserInfoSearch></UserInfoSearch>
+    
+    
+   
   </div>
 </template>
 <script>
 import UserInfoSearch from "@/views/userinfo/comp/UserInfoSearch";
+
 export default {
   name: "UserIndex",
   components: {
-    UserInfoSearch
+    UserInfoSearch,
+
   },
   data() {
-    return {};
+    return {
+      msg:''
+    };
   },
   methods: {}
 };

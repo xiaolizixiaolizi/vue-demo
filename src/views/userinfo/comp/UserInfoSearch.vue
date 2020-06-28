@@ -4,8 +4,16 @@
       <div class="info-search-left">
         <span>关键字</span>
         <el-input v-model="input" placeholder="请输入内容"></el-input>
-        <tree-select :data="options" @sendData="sendData"></tree-select>
+        <!-- <tree-select :options="options" option-val="value" label="label" v-model="defaultVal"></tree-select> -->
+        <my-select
+          :options="options"
+          option-val="value"
+          label="label"
+          v-model="defaultVal"
+          @change="handleChange"
+        ></my-select>
         <el-button type="danger">搜索</el-button>
+        <span>{{defaultVal}}</span>
       </div>
     </el-col>
 
@@ -26,24 +34,22 @@ export default {
   data() {
     return {
       input: "",
-      value: "",
+      defaultVal: 100,
       options: [
         {
-          value: "选项1",
+          value: 100,
           label: "黄金糕"
         },
         {
-          value: "选项2",
+          value: 200,
           label: "双皮奶"
         }
       ]
     };
   },
   methods: {
-    sendData(val) {
-      this.value = val;
-      console.log(this.value);
-      
+    handleChange() {
+      console.log(11);
     }
   }
 };
